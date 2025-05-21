@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mert Kuaför - Style, Precision, Passion</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header Section Start -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#booking">Book Now</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Header Section End -->
+
+    <!-- Main Content Section Start -->
+    <main>
+        <!-- Home Section Start -->
+        <section id="home">
+            <h1>Mert Kuaför: Style, Precision, Passion</h1>
+            <p>Experience the art of hairdressing at Mert Kuaför, where we blend traditional techniques with modern trends to give you the perfect look. Our dedicated team is committed to providing exceptional service and making you feel your best.</p>
+            <a href="#booking" class="cta-button">Book Now</a>
+        </section>
+        <!-- Home Section End -->
+
+        <!-- Services Section Start -->
+        <section id="services">
+            <h2>Our Services</h2>
+            <div class="service-container">
+                <div class="service-item">
+                    <h3>Modern Haircuts</h3>
+                    <p>Stay sharp with a precision haircut tailored to your style and preferences. We specialize in a variety of contemporary and classic cuts.</p>
+                    <p class="price">Starting from 150 TL</p>
+                </div>
+                <div class="service-item">
+                    <h3>Professional Styling</h3>
+                    <p>Whether it's for a special occasion or daily wear, we provide expert styling to achieve the look you desire, from sleek blowouts to intricate updos.</p>
+                    <p class="price">Starting from 100 TL</p>
+                </div>
+                <div class="service-item">
+                    <h3>Expert Coloring</h3>
+                    <p>Transform your look with our range of coloring services, including highlights, balayage, and full-color treatments, using high-quality products.</p>
+                    <p class="price">Starting from 300 TL</p>
+                </div>
+                <div class="service-item">
+                    <h3>Beard Trim & Grooming</h3>
+                    <p>Keep your beard looking its best with our professional trimming and grooming services. We'll shape and maintain your beard to perfection.</p>
+                    <p class="price">Starting from 80 TL</p>
+                </div>
+            </div>
+        </section>
+        <!-- Services Section End -->
+
+        <!-- Gallery Section Start -->
+        <section id="gallery">
+            <h2>Hairstyle Gallery</h2>
+            <div class="gallery-container">
+                <div class="gallery-item">Hairstyle 1</div>
+                <div class="gallery-item">Hairstyle 2</div>
+                <div class="gallery-item">Hairstyle 3</div>
+                <div class="gallery-item">Hairstyle 4</div>
+                <div class="gallery-item">Hairstyle 5</div>
+                <div class="gallery-item">Hairstyle 6</div>
+            </div>
+        </section>
+        <!-- Gallery Section End -->
+
+        <!-- Contact Section Start -->
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p><strong>Address:</strong> Bahariye Caddesi No:42, Kadıköy, İstanbul</p>
+            <div id="map-embed" class="map-placeholder">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.232970954888!2d29.02650631530909!3d40.99813287930224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac41b8bc5f6b1%3A0x8b0a3b20c1517c75!2sBahariye%20Caddesi%20No%3A42%2C%20Osmana%C4%9Fa%2C%2034714%20Kad%C4%B1k%C3%B6y%2F%C4%B0stanbul%2C%20Turkey!5e0!3m2!1sen!2str!4v1678886700000!5m2!1sen!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <p><strong>Phone:</strong> <a href="tel:+902161234567">+90 216 123 4567</a></p>
+            <p><strong>Email:</strong> <a href="mailto:info@mertkuaför.com">info@mertkuaför.com</a></p>
+        </section>
+        <!-- Contact Section End -->
+
+        <!-- Booking Section Start -->
+        <section id="booking">
+            <h2>Book Your Appointment</h2>
+            <form id="booking-form">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div>
+                    <label for="date">Preferred Date:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div>
+                    <label for="service">Preferred Service:</label>
+                    <select id="service" name="service" required>
+                        <option value="">Select a Service</option>
+                        <option value="haircut">Haircut</option>
+                        <option value="styling">Styling</option>
+                        <option value="coloring">Coloring</option>
+                        <option value="beard-trim">Beard Trim</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="message">Message (Optional):</label>
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <button type="submit">Submit Booking</button>
+            </form>
+            <div id="form-message" style="margin-top: 15px;"></div> <!-- Element to display form submission messages -->
+        </section>
+        <!-- Booking Section End -->
+    </main>
+    <!-- Main Content Section End -->
+
+    <!-- Footer Section Start -->
+    <footer>
+        <p>&copy; 2023 Mert Kuaför. All Rights Reserved.</p>
+    </footer>
+    <!-- Footer Section End -->
+
+    <script src="script.js"></script>
+</body>
+</html>
