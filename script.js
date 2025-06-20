@@ -77,6 +77,19 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!date) {
                 isValid = false;
                 errorMessages.push('Date is required.');
+            } else {
+                // Additional validation: Ensure selected date is not in the past
+                const currentDate = new Date();
+                const selectedDate = new Date(date);
+
+                // Normalize dates to compare only the day, month, and year (ignore time)
+                currentDate.setHours(0, 0, 0, 0);
+                selectedDate.setHours(0, 0, 0, 0);
+
+                if (selectedDate < currentDate) {
+                    isValid = false;
+                    errorMessages.push('Please select a date from today or later.');
+                }
             }
 
             // Validate Service
@@ -104,11 +117,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 alert('Please correct the following errors:\n- ' + errorMessages.join('\n- '));
             } else {
                 // If the form is valid, display a success message and "submit" (simulate)
+                const successMessage = "Booking request simulated! This is a demo and no data has been sent. Thank you for trying our form.";
                 if (formMessageElement) {
-                    formMessageElement.textContent = 'Booking request submitted! We will contact you soon.';
+                    formMessageElement.textContent = successMessage;
                     formMessageElement.style.color = 'green';
                 }
-                alert('Booking request submitted! We will contact you soon.');
+                alert(successMessage);
                 bookingForm.reset(); // Clear the form fields after successful "submission"
 
                 // Here you would typically send the data to a server, e.g., using fetch()
