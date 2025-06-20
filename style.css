@@ -134,14 +134,22 @@ section {
 
 /* Placeholder for individual gallery item styling */
 #gallery .gallery-item {
-    width: 150px; /* Example fixed width */
-    height: 150px;
-    background-color: #ccc; /* Placeholder background */
-    margin: 10px;
-    display: flex; /* Using flex for potential content centering */
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #ddd;
+    width: clamp(150px, 25vw, 220px); /* Responsive width */
+    /* height: 150px; Removed to let content define height */
+    background-color: #ccc; /* Placeholder background, image should cover this */
+    margin: 10px; /* Remains */
+    /* display: flex; Removed as image will fill the item */
+    /* align-items: center; Removed */
+    /* justify-content: center; Removed */
+    border: 1px solid #ddd; /* Ensures border is present */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1); /* Add shadow for card effect */
+    overflow: hidden; /* Good practice if content might unexpectedly overflow */
+}
+
+#gallery .gallery-item img {
+    display: block; /* Remove extra space below image */
+    max-width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
 }
 
 /* Contact Section */
