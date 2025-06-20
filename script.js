@@ -70,6 +70,12 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!phone) {
                 isValid = false;
                 errorMessages.push('Phone number is required.');
+            } else {
+                const phoneRegex = /^\d{10,11}$/;
+                if (!phoneRegex.test(phone)) {
+                    isValid = false;
+                    errorMessages.push('Please enter a valid 10 or 11 digit phone number.');
+                }
             }
             // Add more specific phone validation if needed (e.g., regex for format)
 
