@@ -1,10 +1,18 @@
 // Wait for the entire HTML document to be fully loaded and parsed before running the script
 document.addEventListener('DOMContentLoaded', function() {
+    // --- Mobile Menu Toggle ---
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    mobileMenu.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
     // --- Smooth Scrolling for Navigation Links ---
     // Select all anchor links within the navigation list that have an href starting with '#'
-    const navLinks = document.querySelectorAll('nav ul li a[href^="#"]');
+    const navLinksA = document.querySelectorAll('nav ul li a[href^="#"]');
 
-    navLinks.forEach(link => {
+    navLinksA.forEach(link => {
         link.addEventListener('click', function(event) {
             // Prevent the default anchor click behavior (which is to jump to the section)
             event.preventDefault();

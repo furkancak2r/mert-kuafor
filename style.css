@@ -32,16 +32,36 @@ header {
     z-index: 1000;
 }
 
-nav ul {
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.nav-links {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: center;
+    display: flex;
 }
 
-nav ul li {
-    display: inline;
+.nav-links li {
     margin: 0 15px;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
 }
 
 nav ul li a {
@@ -226,21 +246,31 @@ footer {
 
 /* Responsive Layout - Basic Example */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2em;
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        text-align: center;
     }
 
-    h2 {
-        font-size: 1.75em;
+    .nav-links.active {
+        display: flex;
     }
 
-    nav ul li {
-        display: block;
-        margin: 10px 0;
+    .nav-links li {
+        padding: 1rem 0;
+    }
+
+    .menu-toggle {
+        display: flex;
     }
 
     main {
-        padding-top: 180px; /* Adjust if nav items stack */
+        padding-top: 60px; /* Adjust to header height */
     }
 
     #services .service-item {
@@ -255,9 +285,5 @@ footer {
 
     #home h1 {
         font-size: 2.5em;
-    }
-
-     main {
-        padding-top: 220px; /* Adjust if nav items stack */
     }
 }
